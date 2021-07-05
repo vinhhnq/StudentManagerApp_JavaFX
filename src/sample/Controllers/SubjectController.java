@@ -214,7 +214,7 @@ public class SubjectController implements Initializable {
             alertDel2.setHeaderText("Xoá thành công");
             alertDel2.show();
 
-
+            write();
         }
     }
 
