@@ -186,6 +186,8 @@ public class SubjectController implements Initializable {
             alertEdit2.setTitle("Information");
             alertEdit2.setHeaderText("Sửa thành công");
             alertEdit2.show();
+
+            write();
         }
     }
 
@@ -211,6 +213,8 @@ public class SubjectController implements Initializable {
             alertDel2.setTitle("Information");
             alertDel2.setHeaderText("Xoá thành công");
             alertDel2.show();
+
+            write();
         }
     }
 

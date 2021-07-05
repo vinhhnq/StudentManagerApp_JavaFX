@@ -1,2 +1,2 @@
 CS223,Lập trình Java,3.0,4.8
-MA128,giansi,123.0,232.0
+ma111,ngiansf,1.0,2.0
