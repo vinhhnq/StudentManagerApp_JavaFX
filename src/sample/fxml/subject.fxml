@@ -1,72 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
-<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.*?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
-<?import javafx.scene.text.Font?>
-
-<AnchorPane prefHeight="494.0" prefWidth="854.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controllers.SubjectController">
-   <children>
-      <Pane layoutY="-1.0" prefHeight="87.0" prefWidth="860.0" style="-fx-background-color: #6832a8#6832a8;">
-         <children>
-            <Label layoutX="98.0" layoutY="5.0" prefHeight="44.0" prefWidth="276.0" text="Danh sách môn học " textFill="WHITE">
-               <font>
-                  <Font size="32.0" />
-               </font>
-            </Label>
-            <ImageView fitHeight="86.0" fitWidth="86.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../Image/checkListStudent.png" />
-               </image>
-            </ImageView>
-            <Label layoutX="98.0" layoutY="55.0" text="List Subject" textFill="WHITE">
-               <font>
-                  <Font size="21.0" />
-               </font>
-            </Label>
-            <Button fx:id="btnback" layoutX="722.0" layoutY="25.0" mnemonicParsing="false" onAction="#goBack" prefHeight="37.0" prefWidth="103.0" text="Quay Lại " />
-         </children>
-      </Pane>
-      <TableView fx:id="table" layoutY="86.0" onMouseClicked="#handleClickView" prefHeight="408.0" prefWidth="557.0">
-        <columns>
-          <TableColumn fx:id="SubIDCol" prefWidth="100.0" text="Mã  môn " />
-          <TableColumn fx:id="SubNameCol" prefWidth="275.0" text="Tên môn học " />
-            <TableColumn fx:id="creditSubCol" prefWidth="92.0" text="Số tín chỉ " />
-            <TableColumn fx:id="factorSubCol" prefWidth="89.0" text="Hệ số tín " />
-        </columns>
-      </TableView>
-      <Label layoutX="575.0" layoutY="122.0" text="Mã môn ">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </Label>
-      <Label layoutX="573.0" layoutY="181.0" text="Tên môn ">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </Label>
-      <Label layoutX="575.0" layoutY="240.0" prefHeight="17.0" prefWidth="58.0" text="Số tín chỉ ">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </Label>
-      <Label layoutX="573.0" layoutY="300.0" text="Hệ số tín ">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </Label>
-      <TextField fx:id="idSub" layoutX="640.0" layoutY="117.0" prefHeight="26.0" prefWidth="202.0" />
-      <TextField fx:id="nameSub" layoutX="640.0" layoutY="176.0" prefHeight="26.0" prefWidth="202.0" />
-      <TextField fx:id="creSub" layoutX="640.0" layoutY="235.0" prefHeight="26.0" prefWidth="202.0" />
-      <TextField fx:id="factor" layoutX="640.0" layoutY="296.0" prefHeight="26.0" prefWidth="202.0" />
-      <Button fx:id="btnadd" layoutX="573.0" layoutY="388.0" mnemonicParsing="false" onAction="#AddSubject" prefHeight="44.0" prefWidth="69.0" text="THÊM " />
-      <Button fx:id="btnEdit" layoutX="678.0" layoutY="388.0" mnemonicParsing="false" onAction="#EditSubject" prefHeight="44.0" prefWidth="69.0" text="SỬA" />
-      <Button fx:id="btnDelete" layoutX="777.0" layoutY="388.0" mnemonicParsing="false" onAction="#DeleteSubject" prefHeight="44.0" prefWidth="69.0" text="XOÁ " />
-   </children>
+<?import javafx.scene.text.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" prefHeight="494.0" prefWidth="854.0" xmlns="http://javafx.com/javafx/16"
+            fx:controller="sample.Controllers.SubjectController">
+    <children>
+        <Pane layoutY="-1.0" prefHeight="87.0" prefWidth="860.0" style="-fx-background-color: #6832a8#6832a8;">
+            <children>
+                <Label layoutX="98.0" layoutY="5.0" prefHeight="44.0" prefWidth="276.0" text="Danh sách môn học "
+                       textFill="WHITE">
+                    <font>
+                        <Font size="32.0"/>
+                    </font>
+                </Label>
+                <ImageView fitHeight="86.0" fitWidth="86.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../Image/checkListStudent.png"/>
+                    </image>
+                </ImageView>
+                <Label layoutX="98.0" layoutY="55.0" text="List Subject" textFill="WHITE">
+                    <font>
+                        <Font size="21.0"/>
+                    </font>
+                </Label>
+                <Button fx:id="btnback" layoutX="722.0" layoutY="25.0" mnemonicParsing="false" onAction="#goBack"
+                        prefHeight="37.0" prefWidth="103.0" text="Quay Lại "/>
+            </children>
+        </Pane>
+        <TableView fx:id="table" layoutY="86.0" onMouseClicked="#handleClickView" prefHeight="408.0" prefWidth="557.0">
+            <columns>
+                <TableColumn fx:id="SubIDCol" prefWidth="100.0" text="Mã  môn "/>
+                <TableColumn fx:id="SubNameCol" prefWidth="275.0" text="Tên môn học "/>
+                <TableColumn fx:id="creditSubCol" prefWidth="92.0" text="Số tín chỉ "/>
+                <TableColumn fx:id="factorSubCol" prefWidth="89.0" text="Hệ số tín "/>
+            </columns>
+        </TableView>
+        <Label layoutX="575.0" layoutY="122.0" text="Mã môn ">
+            <font>
+                <Font size="14.0"/>
+            </font>
+        </Label>
+        <Label layoutX="573.0" layoutY="181.0" text="Tên môn ">
+            <font>
+                <Font size="14.0"/>
+            </font>
+        </Label>
+        <Label layoutX="575.0" layoutY="240.0" prefHeight="17.0" prefWidth="58.0" text="Số tín chỉ ">
+            <font>
+                <Font size="14.0"/>
+            </font>
+        </Label>
+        <Label layoutX="573.0" layoutY="300.0" text="Hệ số tín ">
+            <font>
+                <Font size="14.0"/>
+            </font>
+        </Label>
+        <TextField fx:id="idSub" layoutX="640.0" layoutY="117.0" prefHeight="26.0" prefWidth="202.0"/>
+        <TextField fx:id="nameSub" layoutX="640.0" layoutY="176.0" prefHeight="26.0" prefWidth="202.0"/>
+        <TextField fx:id="creSub" layoutX="640.0" layoutY="235.0" prefHeight="26.0" prefWidth="202.0"/>
+        <TextField fx:id="factor" layoutX="640.0" layoutY="296.0" prefHeight="26.0" prefWidth="202.0"/>
+        <Button fx:id="btnadd" layoutX="573.0" layoutY="388.0" mnemonicParsing="false" onAction="#AddSubject"
+                prefHeight="44.0" prefWidth="69.0" text="THÊM "/>
+        <Button fx:id="btnEdit" layoutX="678.0" layoutY="388.0" mnemonicParsing="false" onAction="#EditSubject"
+                prefHeight="44.0" prefWidth="69.0" text="SỬA"/>
+        <Button fx:id="btnDelete" layoutX="777.0" layoutY="388.0" mnemonicParsing="false" onAction="#DeleteSubject"
+                prefHeight="44.0" prefWidth="69.0" text="XOÁ "/>
+    </children>
 </AnchorPane>

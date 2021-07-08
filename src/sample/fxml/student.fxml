@@ -1,118 +1,122 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
-<?import javafx.scene.text.Font?>
-
-<AnchorPane prefHeight="612.0" prefWidth="1097.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controllers.StudentController">
-   <children>
-      <Pane prefHeight="89.0" prefWidth="1097.0" style="-fx-background-color: #2FF2A1;">
-         <children>
-            <Label layoutX="106.0" prefHeight="46.0" prefWidth="325.0" text="Danh sách sinh viên" textFill="WHITE">
-               <font>
-                  <Font size="37.0" />
-               </font></Label>
-            <ImageView fitHeight="89.0" fitWidth="89.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../Image/checkListStudent.png" />
-               </image>
-            </ImageView>
-            <Label layoutX="106.0" layoutY="46.0" prefHeight="30.0" prefWidth="143.0" text="Student List" textFill="WHITE">
-               <font>
-                  <Font size="25.0" />
-               </font>
-            </Label>
-            <Button layoutX="935.0" layoutY="22.0" mnemonicParsing="false" onAction="#Backspace" prefHeight="46.0" prefWidth="135.0" textAlignment="CENTER" textOverrun="CLIP">
-               <font>
-                  <Font size="23.0" />
-               </font>
-            </Button>
-            <ImageView fitHeight="37.0" fitWidth="48.0" layoutX="942.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../Image/backspace_icon.png" />
-               </image>
-            </ImageView>
-            <Label layoutX="1003.0" layoutY="38.0" text="Quay  lại ">
-               <font>
-                  <Font size="14.0" />
-               </font>
-            </Label>
-         </children>
-      </Pane>
-      <TableView fx:id="table" layoutY="89.0" onMouseClicked="#handleClickView" prefHeight="524.0" prefWidth="764.0">
-        <columns>
-          <TableColumn fx:id="idCol" prefWidth="81.0" text="Mã Sinh Viên" />
-            <TableColumn fx:id="nameCol" prefWidth="179.0" text="Họ và tên" />
-            <TableColumn fx:id="genderCol" prefWidth="65.0" text="Giới tính" />
-            <TableColumn fx:id="DateCol" prefWidth="127.0" text="Ngày sinh" />
-            <TableColumn fx:id="EmailCol" prefWidth="135.0" text="Email" />
-            <TableColumn fx:id="phoneCol" prefWidth="118.0" text="Số điện thoại" />
-            <TableColumn fx:id="scoreCol" prefWidth="57.0" text="Điểm" />
-        </columns>
-      </TableView>
-      <Label layoutX="779.0" layoutY="102.0" prefHeight="17.0" prefWidth="83.0" text="Mã Sinh Viên ">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </Label>
-      <Label layoutX="778.0" layoutY="149.0" prefHeight="17.0" prefWidth="65.0" text="Họ và tên ">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </Label>
-      <Label text="Label" />
-      <Label layoutX="779.0" layoutY="201.0" prefHeight="17.0" prefWidth="57.0" text="Giới tính ">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </Label>
-      <Label layoutX="780.0" layoutY="253.0" prefHeight="17.0" prefWidth="65.0" text="Ngày sinh ">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </Label>
-      <Label layoutX="782.0" layoutY="310.0" prefHeight="17.0" prefWidth="36.0" text="Email">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </Label>
-      <Label layoutX="780.0" layoutY="362.0" prefHeight="18.0" prefWidth="89.0" text="Số điện thoại">
-         <opaqueInsets>
-            <Insets />
-         </opaqueInsets>
-         <font>
-            <Font size="14.0" />
-         </font>
-      </Label>
-      <TextField fx:id="idText" layoutX="868.0" layoutY="98.0" prefHeight="26.0" prefWidth="219.0" />
-      <TextField fx:id="nameText" layoutX="868.0" layoutY="145.0" prefHeight="26.0" prefWidth="219.0" />
-      <TextField fx:id="genderText" layoutX="868.0" layoutY="197.0" prefHeight="26.0" prefWidth="219.0" />
-      <TextField fx:id="DateofBirthText" layoutX="869.0" layoutY="249.0" prefHeight="26.0" prefWidth="219.0" />
-      <TextField fx:id="EmailText" layoutX="867.0" layoutY="306.0" prefHeight="26.0" prefWidth="219.0" />
-      <TextField fx:id="phoneNumberText" layoutX="868.0" layoutY="358.0" prefHeight="26.0" prefWidth="219.0" />
-      <Button fx:id="btnAddItem" layoutX="780.0" layoutY="473.0" mnemonicParsing="false" onAction="#addItem" prefHeight="37.0" prefWidth="83.0" text="THÊM " />
-      <Button fx:id="btnEdit" layoutX="891.0" layoutY="473.0" mnemonicParsing="false" onAction="#EditItem" prefHeight="37.0" prefWidth="83.0" text="SỬA " />
-      <Button fx:id="btnDelete" layoutX="1002.0" layoutY="473.0" mnemonicParsing="false" onAction="#DeleteItem" prefHeight="37.0" prefWidth="83.0" text="XOÁ " />
-      <Button fx:id="btnfilter" layoutX="783.0" layoutY="526.0" mnemonicParsing="false" onAction="#FilterItem" prefHeight="56.0" prefWidth="65.0" />
-      <ImageView fitHeight="46.0" fitWidth="46.0" layoutX="790.0" layoutY="536.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../Image/filter_icon.png" />
-         </image>
-      </ImageView>
-      <TextField fx:id="filterText" layoutX="866.0" layoutY="532.0" prefHeight="46.0" prefWidth="135.0" />
-      <Label layoutX="780.0" layoutY="417.0" text="Điểm ">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </Label>
-      <TextField fx:id="scoreText" layoutX="868.0" layoutY="413.0" prefHeight="26.0" prefWidth="219.0" />
-   </children>
+<?import javafx.scene.text.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" prefHeight="612.0" prefWidth="1097.0"
+            xmlns="http://javafx.com/javafx/16" fx:controller="sample.Controllers.StudentController">
+    <children>
+        <Pane prefHeight="89.0" prefWidth="1097.0" style="-fx-background-color: #2FF2A1;">
+            <children>
+                <Label layoutX="106.0" prefHeight="46.0" prefWidth="325.0" text="Danh sách sinh viên" textFill="WHITE">
+                    <font>
+                        <Font size="37.0"/>
+                    </font>
+                </Label>
+                <ImageView fitHeight="89.0" fitWidth="89.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../Image/checkListStudent.png"/>
+                    </image>
+                </ImageView>
+                <Label layoutX="106.0" layoutY="46.0" prefHeight="30.0" prefWidth="143.0" text="Student List"
+                       textFill="WHITE">
+                    <font>
+                        <Font size="25.0"/>
+                    </font>
+                </Label>
+                <Button layoutX="935.0" layoutY="22.0" mnemonicParsing="false" onAction="#Backspace" prefHeight="46.0"
+                        prefWidth="135.0" textAlignment="CENTER" textOverrun="CLIP">
+                    <font>
+                        <Font size="23.0"/>
+                    </font>
+                </Button>
+                <ImageView fitHeight="37.0" fitWidth="48.0" layoutX="942.0" layoutY="26.0" pickOnBounds="true"
+                           preserveRatio="true">
+                    <image>
+                        <Image url="@../../Image/backspace_icon.png"/>
+                    </image>
+                </ImageView>
+                <Label layoutX="1003.0" layoutY="38.0" text="Quay  lại ">
+                    <font>
+                        <Font size="14.0"/>
+                    </font>
+                </Label>
+            </children>
+        </Pane>
+        <TableView fx:id="table" layoutY="89.0" onMouseClicked="#handleClickView" prefHeight="524.0" prefWidth="764.0">
+            <columns>
+                <TableColumn fx:id="idCol" prefWidth="81.0" text="Mã Sinh Viên"/>
+                <TableColumn fx:id="nameCol" prefWidth="179.0" text="Họ và tên"/>
+                <TableColumn fx:id="genderCol" prefWidth="65.0" text="Giới tính"/>
+                <TableColumn fx:id="DateCol" prefWidth="127.0" text="Ngày sinh"/>
+                <TableColumn fx:id="EmailCol" prefWidth="135.0" text="Email"/>
+                <TableColumn fx:id="phoneCol" prefWidth="118.0" text="Số điện thoại"/>
+                <TableColumn fx:id="scoreCol" prefWidth="57.0" text="Điểm"/>
+            </columns>
+        </TableView>
+        <Label layoutX="779.0" layoutY="102.0" prefHeight="17.0" prefWidth="83.0" text="Mã Sinh Viên ">
+            <font>
+                <Font size="14.0"/>
+            </font>
+        </Label>
+        <Label layoutX="778.0" layoutY="149.0" prefHeight="17.0" prefWidth="65.0" text="Họ và tên ">
+            <font>
+                <Font size="14.0"/>
+            </font>
+        </Label>
+        <Label text="Label"/>
+        <Label layoutX="779.0" layoutY="201.0" prefHeight="17.0" prefWidth="57.0" text="Giới tính ">
+            <font>
+                <Font size="14.0"/>
+            </font>
+        </Label>
+        <Label layoutX="780.0" layoutY="253.0" prefHeight="17.0" prefWidth="65.0" text="Ngày sinh ">
+            <font>
+                <Font size="14.0"/>
+            </font>
+        </Label>
+        <Label layoutX="782.0" layoutY="310.0" prefHeight="17.0" prefWidth="36.0" text="Email">
+            <font>
+                <Font size="14.0"/>
+            </font>
+        </Label>
+        <Label layoutX="780.0" layoutY="362.0" prefHeight="18.0" prefWidth="89.0" text="Số điện thoại">
+            <opaqueInsets>
+                <Insets/>
+            </opaqueInsets>
+            <font>
+                <Font size="14.0"/>
+            </font>
+        </Label>
+        <TextField fx:id="idText" layoutX="868.0" layoutY="98.0" prefHeight="26.0" prefWidth="219.0"/>
+        <TextField fx:id="nameText" layoutX="868.0" layoutY="145.0" prefHeight="26.0" prefWidth="219.0"/>
+        <TextField fx:id="genderText" layoutX="868.0" layoutY="197.0" prefHeight="26.0" prefWidth="219.0"/>
+        <TextField fx:id="DateofBirthText" layoutX="869.0" layoutY="249.0" prefHeight="26.0" prefWidth="219.0"/>
+        <TextField fx:id="EmailText" layoutX="867.0" layoutY="306.0" prefHeight="26.0" prefWidth="219.0"/>
+        <TextField fx:id="phoneNumberText" layoutX="868.0" layoutY="358.0" prefHeight="26.0" prefWidth="219.0"/>
+        <Button fx:id="btnAddItem" layoutX="780.0" layoutY="473.0" mnemonicParsing="false" onAction="#addItem"
+                prefHeight="37.0" prefWidth="83.0" text="THÊM "/>
+        <Button fx:id="btnEdit" layoutX="891.0" layoutY="473.0" mnemonicParsing="false" onAction="#EditItem"
+                prefHeight="37.0" prefWidth="83.0" text="SỬA "/>
+        <Button fx:id="btnDelete" layoutX="1002.0" layoutY="473.0" mnemonicParsing="false" onAction="#DeleteItem"
+                prefHeight="37.0" prefWidth="83.0" text="XOÁ "/>
+        <Button fx:id="btnfilter" layoutX="783.0" layoutY="526.0" mnemonicParsing="false" onAction="#FilterItem"
+                prefHeight="56.0" prefWidth="65.0"/>
+        <ImageView fitHeight="46.0" fitWidth="46.0" layoutX="790.0" layoutY="536.0" pickOnBounds="true"
+                   preserveRatio="true">
+            <image>
+                <Image url="@../../Image/filter_icon.png"/>
+            </image>
+        </ImageView>
+        <TextField fx:id="filterText" layoutX="866.0" layoutY="532.0" prefHeight="46.0" prefWidth="135.0"/>
+        <Label layoutX="780.0" layoutY="417.0" text="Điểm ">
+            <font>
+                <Font size="14.0"/>
+            </font>
+        </Label>
+        <TextField fx:id="scoreText" layoutX="868.0" layoutY="413.0" prefHeight="26.0" prefWidth="219.0"/>
+    </children>
 </AnchorPane>
