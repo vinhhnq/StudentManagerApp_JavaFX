@@ -137,6 +137,7 @@ public class SubjectController implements Initializable {
             listSubject.add(newSubject);
 
             write();
+            resetText();
 
         } else {
             resetText();

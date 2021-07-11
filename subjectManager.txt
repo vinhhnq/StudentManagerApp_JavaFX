@@ -1,4 +1,2 @@
 CS223,Lập trình Java,3.0,4.8
-MA111,giaitich1,3.0,1.5
-CS223,Lập trình Java,3.0,4.8
-CS223,Lập trình Java,3.0,4.8
+CS2234,Lập trình c#,3.0,4.8

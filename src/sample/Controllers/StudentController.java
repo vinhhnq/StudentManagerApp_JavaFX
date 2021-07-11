@@ -157,6 +157,7 @@ public class StudentController implements Initializable {
             listStudents.add(newStudents);
 
             write();
+            resetText();
         } else {
             resetText();
             Alert alertAdd = new Alert(Alert.AlertType.INFORMATION);
